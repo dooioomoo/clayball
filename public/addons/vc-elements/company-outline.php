@@ -30,7 +30,7 @@ if (!class_exists('Clayball_Company_outline')) {
                     'name' => __('会社概要', 'Clayball-lang'),//VC元件名称
                     'base' => 'Clayball_Company_outline', //对应shortcode
                     'description' => __('会社概要排列', 'Clayball-lang'), //远见说明
-                    'category' => __('3UWEB-SUFPROJECT', 'Clayball-lang'), //VC元件标签设置
+                    'category' => __('CLAYBALL', 'Clayball-lang'), //VC元件标签设置
                     'icon' => __CLAYBALLPLUGINURI__ . '/assets/img/vc-icon.png',
                     'params' => array(
                         array(

@@ -25,28 +25,28 @@ class vcElement extends WPBakeryShortCode
         // Map the block with vc_map()
         vc_map(
             array(
-                'name' => __('SUF:基础新闻列表', 'suf-lang'),//VC元件名称
-                'base' => 'suf_Homepage_NewsList_Table', //对应shortcode
-                'description' => __('SUF的极简模式新闻列表', 'suf-lang'), //远见说明
-                'category' => __('3UWEB-SUFPROJECT', 'suf-lang'), //VC元件标签设置
-                'icon' => __SUFURI__ . '/assets/img/vc-icon.png',
+                'name' => __('基础新闻列表', 'Clayball-lang'),//VC元件名称
+                'base' => 'Clayball_Homepage_NewsList_Table', //对应shortcode
+                'description' => __('极简模式新闻列表', 'Clayball-lang'), //远见说明
+                'category' => __('CLAYBALL', 'Clayball-lang'), //VC元件标签设置
+                'icon' => __CLAYBALLURI__ . '/assets/img/vc-icon.png',
                 'params' => array(
 
                     array(
                         'type' => 'textfield', //表单类型
                         'holder' => 'div', //包裹
                         'class' => 'field-class', // 使用class名
-                        'heading' => __('显示数量', 'suf-lang'), // 标题
+                        'heading' => __('显示数量', 'Clayball-lang'), // 标题
                         'param_name' => 'param', //传参变量
-                        'value' => __('Field name', 'suf-lang'), // 数值
-                        'description' => __('显示多少个新闻内容的设定', 'suf-lang'), //说明
+                        'value' => __('Field name', 'Clayball-lang'), // 数值
+                        'description' => __('显示多少个新闻内容的设定', 'Clayball-lang'), //说明
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => __('默认选项', 'suf-lang'), // 组标签
+                        'group' => __('默认选项', 'Clayball-lang'), // 组标签
                     ),
                     array(
                         'type' => 'dropdown',
-                        'heading' => __('Foo', 'suf-lang'),
+                        'heading' => __('Foo', 'Clayball-lang'),
                         'param_name' => 'foo',
                         'admin_label' => true,
                         'value' => array(
@@ -56,14 +56,14 @@ class vcElement extends WPBakeryShortCode
                             'four' => 'Fourth Option'
                         ),
                         'std' => 'two', // 默认选项
-                        'description' => __('The description', 'suf-lang'),
-                        'group' => __('默认选项', 'suf-lang'),
+                        'description' => __('The description', 'Clayball-lang'),
+                        'group' => __('默认选项', 'Clayball-lang'),
                     ),
                     array(
                         'type' => 'css_editor',
                         'heading' => __('Css', 'my-text-domain'),
                         'param_name' => 'css',
-                        'group' => __('默认选项', 'suf-lang'),
+                        'group' => __('默认选项', 'Clayball-lang'),
                     ),
 
                 ),

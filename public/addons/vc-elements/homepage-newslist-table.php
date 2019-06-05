@@ -26,10 +26,10 @@ class Clayball_Homepage_NewsList_Table extends WPBakeryShortCode
         // Map the block with vc_map()
         vc_map(
             array(
-                'name' => __('SUF:基础新闻列表', 'Clayball-lang'),//VC元件名称
+                'name' => __('基础新闻列表', 'Clayball-lang'),//VC元件名称
                 'base' => 'Clayball_Homepage_NewsList_Table', //对应shortcode
-                'description' => __('SUF的极简模式新闻列表', 'Clayball-lang'), //远见说明
-                'category' => __('3UWEB-SUFPROJECT', 'Clayball-lang'), //VC元件标签设置
+                'description' => __('极简模式新闻列表', 'Clayball-lang'), //远见说明
+                'category' => __('CLAYBALL', 'Clayball-lang'), //VC元件标签设置
                 'icon' => __CLAYBALLPLUGINURI__ . '/assets/img/vc-icon.png',
                 'params' => array(
 
