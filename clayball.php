@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * 创建常量
  */
 $masterfolder = basename(__DIR__);
-define('CLAYBALL_ADDONS_VERSION', '1.0');
+define('CLAYBALL_ADDONS_VERSION', '1.1');
 define('__CLAYBALLPLUGINPATH__', __DIR__);
 define('__CLAYBALLTHEMEPATH__', get_template_directory());
 define('__CLAYBALLPLUGINURI__', plugins_url().'/'.$masterfolder);

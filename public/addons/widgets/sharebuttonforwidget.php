@@ -59,7 +59,7 @@ class Clayball_Widget_ShareLink extends WP_Widget
         if (isset($instance['title'])) {
             $title = $instance['title'];
         } else {
-            $title = __('');
+            $title = '';
         }
         $Clayball_sharelink_facebook  = (!empty($instance['Clayball_sharelink_facebook'])) ? esc_attr($instance['Clayball_sharelink_facebook']) : '';
         $Clayball_sharelink_twitter   = (!empty($instance['Clayball_sharelink_twitter'])) ? esc_attr($instance['Clayball_sharelink_twitter']) : '';

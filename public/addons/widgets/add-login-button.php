@@ -64,7 +64,7 @@ class Clayball_Add_Login_Button extends WP_Widget {
         if (isset($instance['title'])) {
             $title = $instance['title'];
         } else {
-            $title = __('');
+            $title = '';
         } ?>
 
         <p>

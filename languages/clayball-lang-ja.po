@@ -1,0 +1,185 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Project-Id-Version: ClayBall\n"
+"POT-Creation-Date: 2019-06-05 16:02+0900\n"
+"PO-Revision-Date: 2019-06-05 16:03+0900\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: clayball.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: ja\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/lib/clayball-setting.php:28 admin/lib/clayball-setting.php:29
+msgid "ClayBall Options"
+msgstr "黏土波波"
+
+#: public/addons/vc-elements/company-outline.php:30
+msgid "会社概要"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:32
+msgid "会社概要排列"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:33
+#: public/addons/vc-elements/homepage-newslist-table.php:32
+#: public/addons/vc-elements/vc_element_template.php:31
+msgid "CLAYBALL"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:39
+msgid "CLASS名"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:42
+msgid "此组建的自定义class名称"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:45
+#: public/addons/vc-elements/company-outline.php:59
+#: public/addons/vc-elements/company-outline.php:81
+#: public/addons/vc-elements/homepage-newslist-table.php:46
+#: public/addons/vc-elements/homepage-newslist-table.php:56
+#: public/addons/vc-elements/homepage-newslist-table.php:62
+#: public/addons/vc-elements/vc_element_template.php:45
+#: public/addons/vc-elements/vc_element_template.php:60
+#: public/addons/vc-elements/vc_element_template.php:66
+msgid "默认选项"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:49
+msgid "样式选择"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:58
+#: public/addons/vc-elements/homepage-newslist-table.php:55
+msgid "选择您的新闻分类"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:71
+msgid "标题"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:77
+msgid "内容"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:85
+#: public/addons/vc-elements/homepage-newslist-table.php:60
+#: public/addons/vc-elements/vc_element_template.php:64
+msgid "Css"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:87
+msgid "样式设定"
+msgstr ""
+
+#: public/addons/vc-elements/homepage-newslist-table.php:29
+#: public/addons/vc-elements/vc_element_template.php:28
+msgid "基础新闻列表"
+msgstr ""
+
+#: public/addons/vc-elements/homepage-newslist-table.php:31
+#: public/addons/vc-elements/vc_element_template.php:30
+msgid "极简模式新闻列表"
+msgstr ""
+
+#: public/addons/vc-elements/homepage-newslist-table.php:40
+#: public/addons/vc-elements/vc_element_template.php:39
+msgid "显示数量"
+msgstr ""
+
+#: public/addons/vc-elements/homepage-newslist-table.php:43
+#: public/addons/vc-elements/vc_element_template.php:42
+msgid "显示多少个新闻内容的设定"
+msgstr ""
+
+#: public/addons/vc-elements/homepage-newslist-table.php:50
+msgid "分类选择"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:41
+msgid "Field name"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:49
+msgid "Foo"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:59
+msgid "The description"
+msgstr ""
+
+#: public/addons/widgets/add-login-button.php:19
+msgid "メンバー登録のボタン"
+msgstr ""
+
+#: public/addons/widgets/add-login-button.php:71
+#: public/addons/widgets/sharebuttonforwidget.php:71
+msgid "Title:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:27
+msgid "ClayBall Share Buttons"
+msgstr "SNS共享按钮"
+
+#: public/addons/widgets/sharebuttonforwidget.php:77
+msgid "Facebook:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:83
+msgid "Twitter:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:89
+msgid "Google+:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:95
+msgid "Instagram:"
+msgstr ""
+
+#: public/addons/widgets/vcpluginforwidget.php:24
+msgid "Suf Layout Builder"
+msgstr ""
+
+#: public/addons/widgets/vcpluginforwidget.php:82
+msgid "Thim Layout Builder"
+msgstr ""
+
+#: public/addons/widgets/vcpluginforwidget.php:83
+msgid "Open layout builder!"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "ClayBall"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "www.fduit.net"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "jevinsong"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "ryan.asdraw.com"
+msgstr ""
