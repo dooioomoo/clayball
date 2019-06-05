@@ -1,0 +1,14 @@
+{
+  "name": "3uweb/clayball",
+  "description": "the plugin for wordpress normal project",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SUFPROJECT",
+      "email": "song@3u-web.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
