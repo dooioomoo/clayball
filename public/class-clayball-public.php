@@ -51,6 +51,7 @@ class Clayball_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+        $this->init();
 
 	}
 
@@ -99,5 +100,72 @@ class Clayball_Public {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/clayball-public.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+    private function init()
+    {
+
+        $this->clearnfiles = array(
+            'removeversion.php',
+            'disabletrackbacks.php',
+            'navclearn.php',
+            'nicesearch.php',
+            'disable-emojis.php',
+            'clear-google.php',
+        );
+
+        if (!is_admin()){
+            array_push($this->clearnfiles,'clear_up.php');
+        }
+        $this->clayball_check_plugin_installed();
+        $this->clayball_clearn_files();
+        $this->clayball_add_widgets();
+        if ($this->clayball_check_plugin_installed('js_composer/js_composer.php')) {
+            add_action('vc_before_init', array($this, 'vc_before_init_actions'));
+        }
+    }
+
+    private function clayball_clearn_files()
+    {
+        $clearnfilesnone = array();
+        foreach ($this->clearnfiles as $filesname) {
+            if (file_exists(__CLAYBALLPLUGINPATH__ . '/public/modules/' . $filesname)) {
+                require_once(__CLAYBALLPLUGINPATH__ . '/public/modules/' . $filesname);
+            }
+        }   
+    }
+
+    private function clayball_add_widgets()
+    {
+
+        $suf_add_widgets = array(
+            'sharebuttonforwidget.php',
+            'add-login-button.php',
+        );
+        foreach ($suf_add_widgets as $filesname) {
+            if (file_exists(__CLAYBALLPLUGINPATH__ . '/public/addons/widgets/' . $filesname)) {
+                require_once(__CLAYBALLPLUGINPATH__ . '/public/addons/widgets/' . $filesname);
+            }
+        }
+    }
+
+    public function vc_before_init_actions()
+    {
+        $vc_addons_files = array(
+            'homepage-newslist-table.php',
+            'company-outline.php',
+        );
+
+        foreach ($vc_addons_files as $filesname) {
+            if (file_exists(__CLAYBALLPLUGINPATH__ . '/public/addons/vc-elements/' . $filesname)) {
+                require_once(__CLAYBALLPLUGINPATH__ . '/public/addons/vc-elements/' . $filesname);
+            }
+        }
+    }
+
+    public function clayball_check_plugin_installed($plugin_name=''){
+        $active_plugins = apply_filters('active_plugins', get_option('active_plugins'));
+//        var_dump($active_plugins);
+        return in_array($plugin_name,$active_plugins);
+    }
 
 }

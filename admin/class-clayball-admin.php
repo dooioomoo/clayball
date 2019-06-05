@@ -51,6 +51,7 @@ class Clayball_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+        if (is_admin()) $this->run_admin();
 
 	}
 
@@ -99,5 +100,23 @@ class Clayball_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/clayball-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+	private function run_admin(){
+        $this->admin_init();
+    }
+
+    private function admin_init(){
+        $this->modules = array(
+            'custom-admin-menu.php',
+        );
+
+        foreach ($this->modules as $filesname) {
+            if (file_exists(__CLAYBALLPLUGINPATH__ . '/admin/modules/' . $filesname)) {
+                require_once(__CLAYBALLPLUGINPATH__ . '/admin/modules/' . $filesname);
+            }
+        }
+    }
+
+
 
 }

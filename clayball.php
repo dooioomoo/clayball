@@ -31,6 +31,14 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
+ * 创建常量
+ */
+$masterfolder = basename(__DIR__);
+define('CLAYBALL_ADDONS_VERSION', '1.0');
+define('__CLAYBALLPLUGINPATH__', __DIR__);
+define('__CLAYBALLTHEMEPATH__', get_template_directory());
+define('__CLAYBALLPLUGINURI__', plugins_url().'/'.$masterfolder);
+/**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
