@@ -12,11 +12,12 @@ class ClassClayballSettingGeneral extends ClassClayballSettingWrap
     {
         parent::__construct($menuitem);
         add_action('admin_init', array($this, 'RegFields'));
+        $this->regsection = parent::ReturnRegSection().'General';
     }
 
     public function RegFields()
     {
-        register_setting(parent::ReturnRegSection(), 'clayballsetting_multiple_images');
+        register_setting($this->regsection, 'clayballsetting_multiple_images');
     }
 
     public function CreatePanel()
@@ -38,15 +39,15 @@ class ClassClayballSettingGeneral extends ClassClayballSettingWrap
             }
         }
 
-        $clayballsetting_multiple_images = get_option('clayballsetting_multiple_images', []);
+        $clayballsetting_multiple_images = (array)get_option('clayballsetting_multiple_images', []);
 
 
-        settings_fields(parent::ReturnRegSection());
-        do_settings_sections(parent::ReturnRegSection()); ?>
+        settings_fields($this->regsection);
+        do_settings_sections($this->regsection); ?>
 
         <table class="form-table">
             <tr valign="top">
-                <th scope="row"><?php echo __('MULTIPLE IMAGE POST TYPE', 'clayball-lang'); ?></th>
+                <th scope="row"><?php echo __('POST TYPE', 'clayball-lang'); ?></th>
                 <td>
                     <div class="checkbox" style="display:flex;align-items: center;justify-content: flex-start;">
                         <?php foreach ($checkgroup as $inx => $value): ?>
@@ -56,8 +57,11 @@ class ClassClayballSettingGeneral extends ClassClayballSettingWrap
                                     <?php checked(in_array($value, $clayballsetting_multiple_images), 1); ?>
                                        value="<?php echo $value; ?>"/> <?php echo $value; ?>
                             </label>
+
                         <?php endforeach; ?>
+
                     </div>
+                    <p class="description"><?php echo __('Enable Multiple images for pages, posts and custom post types. Note: By default pages only.', 'clayball-lang'); ?></p>
                 </td>
             </tr>
 

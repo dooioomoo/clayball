@@ -1,0 +1,67 @@
+#add_clayball_gallery_section{
+  ul{
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:100%;
+    flex-wrap: wrap;
+    overflow:hidden;
+    li{
+      flex: 1 0 26%;
+      border: 1px solid #eee;
+      box-sizing: border-box;
+      margin: 5px;
+      line-height: 0;
+      min-height: 80px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position:relative;
+      &:hover{
+        .delbutton{
+          display:block;
+        }
+      }
+      .delbutton{
+        display:none;
+        position:absolute;
+        right:-6px;
+        top:-6px;
+        width:20px;
+        height:20px;
+        border-radius:300%;
+        background:rgba(red,.8);
+        cursor:pointer;
+        &::before{
+          content: "";
+          display: block;
+          width: 8px;
+          height: 3px;
+          background-color: #fff;
+          position: relative;
+          top: 9px;
+          margin: 0 auto;
+        }
+      }
+      img{
+        max-width:100%;
+        height:auto;
+      }
+    }
+  }
+  .ui-sortable{
+    .photo-item{
+      background:#fff;
+      cursor:move;
+      &.ui-sortable-helper{
+        box-shadow:1px 1px 15px rgba(black,.3);
+      }
+    }
+    .ui-state-highlight{
+        border:3px dotted #ccc;
+        background:#eee!important;
+    }
+
+  }
+}
+

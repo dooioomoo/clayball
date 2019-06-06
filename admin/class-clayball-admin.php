@@ -51,8 +51,7 @@ class Clayball_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-        if (is_admin()) $this->run_admin();
-
+        if (is_admin()) self::run_admin();
 	}
 
 	/**

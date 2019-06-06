@@ -12,20 +12,21 @@ class ClassClayballSettingBase extends ClassClayballSettingWrap
     {
         parent::__construct($menuitem);
         add_action('admin_init', array($this, 'RegFields'));
+        $this->regsection = parent::ReturnRegSection().'Base';
     }
 
     public function RegFields()
     {
-        register_setting(parent::ReturnRegSection(), 'clayballsetting_name');
-        register_setting(parent::ReturnRegSection(), 'clayballsetting_telphone');
-        register_setting(parent::ReturnRegSection(), 'clayballsetting_zipcode');
-        register_setting(parent::ReturnRegSection(), 'clayballsetting_address');
+        register_setting($this->regsection, 'clayballsetting_name');
+        register_setting($this->regsection, 'clayballsetting_telphone');
+        register_setting($this->regsection, 'clayballsetting_zipcode');
+        register_setting($this->regsection, 'clayballsetting_address');
     }
 
     public function CreatePanel()
     {
-        settings_fields(parent::ReturnRegSection());
-        do_settings_sections(parent::ReturnRegSection()); ?>
+        settings_fields($this->regsection);
+        do_settings_sections($this->regsection); ?>
 
         <table class="form-table">
             <tr valign="top">

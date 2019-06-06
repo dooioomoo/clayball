@@ -9,6 +9,7 @@
 class ClassClayballSettingWrap
 {
     public $menuitem;
+    public $currentItem;
 
     public function __construct($menuitem = array())
     {
