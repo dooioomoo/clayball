@@ -26,9 +26,9 @@ class Clayball_Homepage_NewsList_Table extends WPBakeryShortCode
         // Map the block with vc_map()
         vc_map(
             array(
-                'name' => __('基础新闻列表', 'Clayball-lang'),//VC元件名称
+                'name' => __('NEWS LIST', 'Clayball-lang'),//VC元件名称
                 'base' => 'Clayball_Homepage_NewsList_Table', //对应shortcode
-                'description' => __('极简模式新闻列表', 'Clayball-lang'), //远见说明
+                'description' => __('a sample news list for frontpage', 'Clayball-lang'), //远见说明
                 'category' => __('CLAYBALL', 'Clayball-lang'), //VC元件标签设置
                 'icon' => __CLAYBALLPLUGINURI__ . '/assets/img/vc-icon.png',
                 'params' => array(
@@ -37,29 +37,29 @@ class Clayball_Homepage_NewsList_Table extends WPBakeryShortCode
                         'type' => 'textfield', //表单类型
                         'holder' => 'div', //包裹
                         'class' => 'field-class', // 使用class名
-                        'heading' => __('显示数量', 'Clayball-lang'), // 标题
+                        'heading' => __('news count', 'Clayball-lang'), // 标题
                         'param_name' => 'param', //传参变量
                         'value' => 5, // 数值
-                        'description' => __('显示多少个新闻内容的设定', 'Clayball-lang'), //说明
+                        'description' => __('Count of news displayed', 'Clayball-lang'), //说明
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => __('默认选项', 'Clayball-lang'), // 组标签
+                        'group' => __('normal', 'Clayball-lang'), // 组标签
                     ),
                     array(
                         'type' => 'dropdown',
-                        'heading' => __('分类选择', 'Clayball-lang'),
+                        'heading' => __('category', 'Clayball-lang'),
                         'param_name' => 'categorys',
                         'admin_label' => true,
                         'value' => $this->return_catelist('category'),
                         'std' => 'two', // 默认选项
-                        'description' => __('选择您的新闻分类', 'Clayball-lang'),
-                        'group' => __('默认选项', 'Clayball-lang'),
+                        'description' => __('choice a category', 'Clayball-lang'),
+                        'group' => __('normal', 'Clayball-lang'),
                     ),
                     array(
                         'type' => 'css_editor',
                         'heading' => __('Css', 'my-text-domain'),
                         'param_name' => 'css',
-                        'group' => __('默认选项', 'Clayball-lang'),
+                        'group' => __('normal', 'Clayball-lang'),
                     ),
 
                 ),

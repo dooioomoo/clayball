@@ -16,7 +16,7 @@ class Clayball_Add_Login_Button extends WP_Widget {
      * @since 0.8.2
      */
     function __construct() {
-        parent::__construct( false, __( 'メンバー登録のボタン', 'suf-lang' ) );
+        parent::__construct( false, __( 'Member Login', 'suf-lang' ) );
     }
 
 

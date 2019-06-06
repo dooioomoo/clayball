@@ -36,13 +36,13 @@ class vcElement extends WPBakeryShortCode
                         'type' => 'textfield', //表单类型
                         'holder' => 'div', //包裹
                         'class' => 'field-class', // 使用class名
-                        'heading' => __('显示数量', 'Clayball-lang'), // 标题
+                        'heading' => __('Count', 'Clayball-lang'), // 标题
                         'param_name' => 'param', //传参变量
                         'value' => __('Field name', 'Clayball-lang'), // 数值
-                        'description' => __('显示多少个新闻内容的设定', 'Clayball-lang'), //说明
+                        'description' => __('Count of news displayed', 'Clayball-lang'), //说明
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => __('默认选项', 'Clayball-lang'), // 组标签
+                        'group' => __('normal', 'Clayball-lang'), // 组标签
                     ),
                     array(
                         'type' => 'dropdown',
@@ -57,13 +57,13 @@ class vcElement extends WPBakeryShortCode
                         ),
                         'std' => 'two', // 默认选项
                         'description' => __('The description', 'Clayball-lang'),
-                        'group' => __('默认选项', 'Clayball-lang'),
+                        'group' => __('normal', 'Clayball-lang'),
                     ),
                     array(
                         'type' => 'css_editor',
                         'heading' => __('Css', 'my-text-domain'),
                         'param_name' => 'css',
-                        'group' => __('默认选项', 'Clayball-lang'),
+                        'group' => __('normal', 'Clayball-lang'),
                     ),
 
                 ),

@@ -6,7 +6,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
         public function __construct()
         {
 
-            $this->clayballsetting_multiple_images = !is_array(get_option('clayballsetting_multiple_images', [])) ? ['page'] : get_option('clayballsetting_multiple_images', []);
+            $this->clayballsetting_multiple_images_posttype = !is_array(get_option('clayballsetting_multiple_images_posttype', [])) ? ['page'] : get_option('clayballsetting_multiple_images_posttype', []);
             add_action('add_meta_boxes', array($this, 'AddMetaboxToPosttype'));
             add_action('save_post', array($this, 'CustomPostimageSaveImage'));
         }
@@ -16,7 +16,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
             wp_enqueue_script( 'Clayball-js-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/js/multiple-images.js', array( 'jquery','jquery-ui-selectable'), CLAYBALL_ADDONS_VERSION, false );
             wp_enqueue_style('Clayball-cssgroup-jquery-ui', 'http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
             wp_enqueue_style('Clayball-cssgroup-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/css/multiple-images.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
-            foreach ($this->clayballsetting_multiple_images as $posttype) {
+            foreach ($this->clayballsetting_multiple_images_posttype as $posttype) {
                 add_meta_box('custom_postimage_meta_box', __('Featured Gallery', 'clayball-lang'), array($this, 'CustomPostimagesFunc'), $posttype, 'side', 'low');
             }
         }
@@ -26,7 +26,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
             ?>
             <p class="hide-if-no-js">
                 <button class="button tagadd" id="clayball_add_multilpleimages">
-                    <?php echo __('Set featured image', 'clayball-lang'); ?>
+                    <?php echo __('Set featured gallery', 'clayball-lang'); ?>
                 </button>
             </p>
             <p></p>

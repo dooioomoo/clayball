@@ -36,17 +36,17 @@ if (!class_exists('Clayball_Company_outline')) {
                         array(
                             'type' => 'textfield', //表单类型
                             'holder' => 'div', //包裹
-                            'heading' => __('CLASS名', 'Clayball-lang'), // 标题
+                            'heading' => __('custome class name', 'Clayball-lang'), // 标题
                             'param_name' => 'classname', //传参变量
                             'value' => '', // 数值
-                            'description' => __('此组建的自定义class名称', 'Clayball-lang'), //说明
+                            'description' => __('set custome class name', 'Clayball-lang'), //说明
                             'admin_label' => false,
                             'weight' => 0,
-                            'group' => __('默认选项', 'Clayball-lang'), // 组标签
+                            'group' => __('normal', 'Clayball-lang'), // 组标签
                         ),
                         array(
                             'type' => 'dropdown',
-                            'heading' => __('样式选择', 'Clayball-lang'),
+                            'heading' => __('Style', 'Clayball-lang'),
                             'param_name' => 'changestyle',
                             'admin_label' => true,
                             'value' => array(
@@ -55,8 +55,8 @@ if (!class_exists('Clayball_Company_outline')) {
                                 'LINE STYLE' => 'line-style',
                             ),
                             'std' => '', // 默认选项
-                            'description' => __('选择您的新闻分类', 'Clayball-lang'),
-                            'group' => __('默认选项', 'Clayball-lang'),
+                            'description' => __('Choice a NEWS type', 'Clayball-lang'),
+                            'group' => __('normal', 'Clayball-lang'),
                         ),
                         // params group
                         array(
@@ -68,23 +68,23 @@ if (!class_exists('Clayball_Company_outline')) {
                                 array(
                                     'type' => 'textfield',
                                     'value' => '',
-                                    'heading' => __('标题', 'Clayball-lang'),
+                                    'heading' => __('Title', 'Clayball-lang'),
                                     'param_name' => 'comp_title',
                                 ),
                                 array(
                                     'type' => 'textarea',
                                     'value' => '',
-                                    'heading' => __('内容', 'Clayball-lang'),
+                                    'heading' => __('content', 'Clayball-lang'),
                                     'param_name' => 'comp_content',
                                 )
                             ),
-                            'group' => __('默认选项', 'Clayball-lang'),
+                            'group' => __('normal', 'Clayball-lang'),
                         ),
                         array(
                             'type' => 'css_editor',
                             'heading' => __('Css', 'my-text-domain'),
                             'param_name' => 'css',
-                            'group' => __('样式设定', 'Clayball-lang'),
+                            'group' => __('Style Setting', 'Clayball-lang'),
                         ),
 
                     ),

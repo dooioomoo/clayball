@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: ClayBall\n"
-"POT-Creation-Date: 2019-06-05 16:02+0900\n"
-"PO-Revision-Date: 2019-06-05 16:01+0900\n"
+"POT-Creation-Date: 2019-06-06 18:10+0900\n"
+"PO-Revision-Date: 2019-06-06 16:32+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,63 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/lib/clayball-setting.php:28 admin/lib/clayball-setting.php:29
-msgid "ClayBall Options"
+#: admin/lib/class-clayball-setting-base.php:33
+msgid "COMPANY NAME"
+msgstr ""
+
+#: admin/lib/class-clayball-setting-base.php:39
+msgid "TEL"
+msgstr ""
+
+#: admin/lib/class-clayball-setting-base.php:45
+msgid "ZIPCODE"
+msgstr ""
+
+#: admin/lib/class-clayball-setting-base.php:51
+msgid "ADDRESS"
+msgstr ""
+
+#: admin/lib/class-clayball-setting-general.php:48
+msgid "Multiple Image Upload"
+msgstr ""
+
+#: admin/lib/class-clayball-setting-general.php:52
+msgid "POST TYPE"
+msgstr ""
+
+#: admin/lib/class-clayball-setting-general.php:67
+msgid ""
+"Enable Multiple images for pages, posts and custom post types. Note: By "
+"default pages only."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: admin/lib/class-clayball-setting-wrap.php:40
+#: admin/lib/clayball-setting.php:34
+msgid "ClayBall"
+msgstr ""
+
+#: admin/lib/clayball-add-multiple-images.php:20
+msgid "Featured Gallery"
+msgstr ""
+
+#: admin/lib/clayball-add-multiple-images.php:29
+msgid "Set featured gallery"
+msgstr ""
+
+#: admin/lib/clayball-add-multiple-images.php:63
+#: admin/lib/clayball-add-multiple-images.php:65
+msgid "Select image"
+msgstr ""
+
+#: admin/lib/clayball-setting.php:19 admin/lib/clayball-setting.php:33
+#: admin/lib/clayball-setting.php:42 admin/lib/clayball-setting.php:43
+msgid "General Setting"
+msgstr ""
+
+#: admin/lib/clayball-setting.php:20 admin/lib/clayball-setting.php:56
+#: admin/lib/clayball-setting.php:57
+msgid "Informations"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:30
@@ -39,11 +94,11 @@ msgid "CLAYBALL"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:39
-msgid "CLASS名"
+msgid "custome class name"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:42
-msgid "此组建的自定义class名称"
+msgid "set custome class name"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:45
@@ -55,24 +110,23 @@ msgstr ""
 #: public/addons/vc-elements/vc_element_template.php:45
 #: public/addons/vc-elements/vc_element_template.php:60
 #: public/addons/vc-elements/vc_element_template.php:66
-msgid "默认选项"
+msgid "normal"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:49
-msgid "样式选择"
+msgid "Style"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:58
-#: public/addons/vc-elements/homepage-newslist-table.php:55
-msgid "选择您的新闻分类"
+msgid "Choice a NEWS type"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:71
-msgid "标题"
+msgid "Title"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:77
-msgid "内容"
+msgid "content"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:85
@@ -82,31 +136,44 @@ msgid "Css"
 msgstr ""
 
 #: public/addons/vc-elements/company-outline.php:87
-msgid "样式设定"
+msgid "Style Setting"
 msgstr ""
 
 #: public/addons/vc-elements/homepage-newslist-table.php:29
-#: public/addons/vc-elements/vc_element_template.php:28
-msgid "基础新闻列表"
+msgid "NEWS LIST"
 msgstr ""
 
 #: public/addons/vc-elements/homepage-newslist-table.php:31
-#: public/addons/vc-elements/vc_element_template.php:30
-msgid "极简模式新闻列表"
+msgid "a sample news list for frontpage"
 msgstr ""
 
 #: public/addons/vc-elements/homepage-newslist-table.php:40
-#: public/addons/vc-elements/vc_element_template.php:39
-msgid "显示数量"
+msgid "news count"
 msgstr ""
 
 #: public/addons/vc-elements/homepage-newslist-table.php:43
 #: public/addons/vc-elements/vc_element_template.php:42
-msgid "显示多少个新闻内容的设定"
+msgid "Count of news displayed"
 msgstr ""
 
 #: public/addons/vc-elements/homepage-newslist-table.php:50
-msgid "分类选择"
+msgid "category"
+msgstr ""
+
+#: public/addons/vc-elements/homepage-newslist-table.php:55
+msgid "choice a category"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:28
+msgid "基础新闻列表"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:30
+msgid "极简模式新闻列表"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:39
+msgid "Count"
 msgstr ""
 
 #: public/addons/vc-elements/vc_element_template.php:41
@@ -122,7 +189,7 @@ msgid "The description"
 msgstr ""
 
 #: public/addons/widgets/add-login-button.php:19
-msgid "メンバー登録のボタン"
+msgid "Member Login"
 msgstr ""
 
 #: public/addons/widgets/add-login-button.php:71
@@ -148,22 +215,6 @@ msgstr ""
 
 #: public/addons/widgets/sharebuttonforwidget.php:95
 msgid "Instagram:"
-msgstr ""
-
-#: public/addons/widgets/vcpluginforwidget.php:24
-msgid "Suf Layout Builder"
-msgstr ""
-
-#: public/addons/widgets/vcpluginforwidget.php:82
-msgid "Thim Layout Builder"
-msgstr ""
-
-#: public/addons/widgets/vcpluginforwidget.php:83
-msgid "Open layout builder!"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-msgid "ClayBall"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

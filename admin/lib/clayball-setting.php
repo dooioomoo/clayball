@@ -16,8 +16,8 @@ if (!class_exists('ClayBall_Setting')) {
             require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'class-clayball-setting-wrap.php');
 
             $this->menuitem = array(
-                'clayball-settings' => __('基本設定', 'clayball-lang'),
-                'clayball-settings-base'=>  __('サイト情報', 'clayball-lang'),
+                'clayball-settings' => __('General Setting', 'clayball-lang'),
+                'clayball-settings-base'=>  __('Informations', 'clayball-lang'),
             );
 
             add_action('admin_menu', array($this, 'ClayballSettingMenuInit'));
@@ -30,8 +30,8 @@ if (!class_exists('ClayBall_Setting')) {
             $this->clayball_general = new ClassClayballSettingGeneral($this->menuitem);
 
             add_menu_page(
-                __('基本設定', 'clayball-lang'),
-                __('ClayBall Options', 'clayball-lang'),
+                __('General Setting', 'clayball-lang'),
+                __('ClayBall', 'clayball-lang'),
                 'edit_posts',
                 'clayball-settings',
                 array($this->clayball_general, 'index'),
@@ -39,8 +39,8 @@ if (!class_exists('ClayBall_Setting')) {
             );
             add_submenu_page(
                 'clayball-settings',
-                __('基本設定', 'clayball-lang'),
-                __('基本設定', 'clayball-lang'),
+                __('General Setting', 'clayball-lang'),
+                __('General Setting', 'clayball-lang'),
                 'edit_posts',
                 'clayball-settings'
             );
@@ -53,8 +53,8 @@ if (!class_exists('ClayBall_Setting')) {
             $this->clayball_base = new ClassClayballSettingBase($this->menuitem);
             add_submenu_page(
                 'clayball-settings',
-                __('サイト情報', 'clayball-lang'),
-                __('サイト情報', 'clayball-lang'),
+                __('Informations', 'clayball-lang'),
+                __('Informations', 'clayball-lang'),
                 'edit_posts',
                 'clayball-settings-base',
                 array($this->clayball_base, 'index')

@@ -30,27 +30,27 @@ class ClassClayballSettingBase extends ClassClayballSettingWrap
 
         <table class="form-table">
             <tr valign="top">
-                <th scope="row"><?php echo __('NAME', 'clayball-lang'); ?></th>
+                <th scope="row"><?php echo __('COMPANY NAME', 'clayball-lang'); ?></th>
                 <td><input type="text" name="clayballsetting_name" class="regular-text"
-                           value="<?php echo esc_attr(get_option('clayballsetting_name')); ?>"/></td>
+                           value="<?php echo esc_attr(get_option('clayballsetting_name')); ?>"/> [clayball base='clayballsetting_name']</td>
             </tr>
 
             <tr valign="top">
                 <th scope="row"><?php echo __('TEL', 'clayball-lang'); ?></th>
                 <td><input type="text" name="clayballsetting_telphone" class="regular-text"
-                           value="<?php echo esc_attr(get_option('clayballsetting_telphone')); ?>"/></td>
+                           value="<?php echo esc_attr(get_option('clayballsetting_telphone')); ?>"/> [clayball base='clayballsetting_telphone'] </td>
             </tr>
 
             <tr valign="top">
                 <th scope="row"><?php echo __('ZIPCODE', 'clayball-lang'); ?></th>
                 <td><input type="text" name="clayballsetting_zipcode" class="regular-text"
-                           value="<?php echo esc_attr(get_option('clayballsetting_zipcode')); ?>"/></td>
+                           value="<?php echo esc_attr(get_option('clayballsetting_zipcode')); ?>"/> [clayball base='clayballsetting_zipcode']</td>
             </tr>
 
             <tr valign="top">
                 <th scope="row"><?php echo __('ADDRESS', 'clayball-lang'); ?></th>
                 <td>
-                    <textarea type="text" name="clayballsetting_address" class="regular-text" row="5"><?php echo esc_attr(get_option('clayballsetting_address')); ?></textarea></td>
+                    <textarea type="text" name="clayballsetting_address" class="regular-text" row="5"><?php echo esc_attr(get_option('clayballsetting_address')); ?></textarea> [clayball base='clayballsetting_address']</td>
             </tr>
 
         </table>

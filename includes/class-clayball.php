@@ -122,6 +122,9 @@ class Clayball {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-clayball-public.php';
 
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/clayball-public-shortcode.php';
+
 		$this->loader = new Clayball_Loader();
 
 	}
