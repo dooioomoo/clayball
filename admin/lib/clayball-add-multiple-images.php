@@ -13,7 +13,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
 
         public function AddMetaboxToPosttype()
         {
-            wp_enqueue_script( 'Clayball-js-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/js/multiple-images.js', array( 'jquery','jquery-ui-selectable'), CLAYBALL_ADDONS_VERSION, false );
+            wp_enqueue_script('Clayball-js-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/js/multiple-images.js', array('jquery', 'jquery-ui-selectable'), CLAYBALL_ADDONS_VERSION, false);
             wp_enqueue_style('Clayball-cssgroup-jquery-ui', 'http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
             wp_enqueue_style('Clayball-cssgroup-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/css/multiple-images.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
             foreach ($this->clayballsetting_multiple_images_posttype as $posttype) {
@@ -32,7 +32,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
             <p></p>
             <div class="imagesList" id="add_clayball_gallery_section">
                 <?php
-                $imggroup = get_post_meta($post->ID, 'add_clayball_gallery_array', true);
+                $imggroup = get_post_meta($post->ID, 'clayball_gallery_array', true);
                 if (is_array($imggroup)) {
                     $image_meta_val = implode(',', $imggroup);
                 } else {
@@ -48,7 +48,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
                     }
                     ?></ul>
             </div>
-            <input type="hidden" name="add_clayball_gallery_array" id="add_clayball_gallery_array"
+            <input type="hidden" name="clayball_gallery_array" id="clayball_gallery_array"
                    value="<?php echo isset($image_meta_val) ? $image_meta_val : ''; ?>"/>
             <script>
                 $(document).ready(function () {
@@ -76,12 +76,12 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
                             $('#add_clayball_gallery_section ul').append('<li class="photo-item ui-state-default" data-id="' + attachment.id + '"><span class="delbutton"></span><img src="' + attachment.url + '"></li>');
                         });
                         imggroup = (imggroup.substring(imggroup.length - 1) == ',') ? imggroup.substring(0, imggroup.length - 1) : imggroup;
-                        $('input#add_clayball_gallery_array').val(imggroup);
+                        $('input#clayball_gallery_array').val(imggroup);
 
                     });
                     custom_postimage_uploader.on('open', function () {
                         var selection = custom_postimage_uploader.state().get('selection');
-                        var selected = $('input#add_clayball_gallery_array').val();
+                        var selected = $('input#clayball_gallery_array').val();
                         if (selected) {
                             selected = selected.split(',');
                             selected.map(function (val) {
@@ -96,7 +96,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
                 $('#add_clayball_gallery_section').on('click', '.photo-item span.delbutton', function (e) {
                     e.preventDefault();
                     var img_id = $(this).parent().data('id');
-                    var img_group = $('input#add_clayball_gallery_array').val();
+                    var img_group = $('input#clayball_gallery_array').val();
                     img_group = img_group.split(',');
                     var result = [];
                     for (var i = 0; i < img_group.length; i++) {
@@ -105,7 +105,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
                         }
                     }
                     img_group = result.join(',');
-                    $('input#add_clayball_gallery_array').val(img_group);
+                    $('input#clayball_gallery_array').val(img_group);
                     $(this).parent().hide(300).remove();
                 });
             </script>
@@ -119,15 +119,17 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
                 return 'not permitted';
             }
             if (isset($_POST['custom_postimage_meta_box_nonce']) && wp_verify_nonce($_POST['custom_postimage_meta_box_nonce'], 'custom_postimage_meta_box')) {
-                if (isset($_POST['add_clayball_gallery_array']) && intval($_POST['add_clayball_gallery_array']) != '') {
-                    $_POST['add_clayball_gallery_array'] = explode(",", $_POST['add_clayball_gallery_array']);
-                    update_post_meta($post_id, 'add_clayball_gallery_array', $_POST['add_clayball_gallery_array']);
+                if (isset($_POST['clayball_gallery_array']) && intval($_POST['clayball_gallery_array']) != '') {
+                    $_POST['clayball_gallery_array'] = explode(",", $_POST['clayball_gallery_array']);
+                    update_post_meta($post_id, 'clayball_gallery_array', $_POST['clayball_gallery_array']);
                 } else {
-                    update_post_meta($post_id, 'add_clayball_gallery_array', '');
+                    update_post_meta($post_id, 'clayball_gallery_array', '');
                 }
             }
         }
-        public function enqueue_scripts() {
+
+        public function enqueue_scripts()
+        {
 
         }
 

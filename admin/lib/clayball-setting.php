@@ -17,7 +17,7 @@ if (!class_exists('ClayBall_Setting')) {
 
             $this->menuitem = array(
                 'clayball-settings' => __('General Setting', 'clayball-lang'),
-                'clayball-settings-base'=>  __('Informations', 'clayball-lang'),
+                'clayball-settings-base' => __('Informations', 'clayball-lang'),
             );
 
             add_action('admin_menu', array($this, 'ClayballSettingMenuInit'));

@@ -27,7 +27,7 @@
                 $('#add_clayball_gallery_section ul >li').each(function (inx, obj) {
                     sortID.push($(this).data('id'));
                 });
-                $('input#add_clayball_gallery_array').val(sortID.join(','));
+                $('input#clayball_gallery_array').val(sortID.join(','));
             }
         });
 

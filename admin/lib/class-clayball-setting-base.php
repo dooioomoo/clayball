@@ -50,7 +50,8 @@ class ClassClayballSettingBase extends ClassClayballSettingWrap
             <tr valign="top">
                 <th scope="row"><?php echo __('ADDRESS', 'clayball-lang'); ?></th>
                 <td>
-                    <textarea type="text" name="clayballsetting_address" class="regular-text" row="5"><?php echo esc_attr(get_option('clayballsetting_address')); ?></textarea> [clayball base='clayballsetting_address']</td>
+                    <textarea type="text" name="clayballsetting_address" class="regular-text" row="5"><?php echo esc_attr(get_option('clayballsetting_address')); ?></textarea>
+                    [clayball base='clayballsetting_address']</td>
             </tr>
 
         </table>

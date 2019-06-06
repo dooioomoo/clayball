@@ -45,8 +45,11 @@ class ClassClayballSettingGeneral extends ClassClayballSettingWrap
         settings_fields($this->regsection);
         do_settings_sections($this->regsection); ?>
         <fieldset>
-            <legend><h3><?php echo __('Multiple Image Upload', 'clayball-lang'); ?></h3><small>Option name :
-                    clayballsetting_multiple_images_posttype</small></legend>
+            <legend><h3><?php echo __('Multiple Image Upload', 'clayball-lang'); ?></h3>
+                <small>Option name :
+                    clayballsetting_multiple_images_posttype
+                </small>
+            </legend>
             <table class="form-table">
                 <tr valign="top">
                     <th scope="row"><?php echo __('POST TYPE', 'clayball-lang'); ?></th>
@@ -55,7 +58,8 @@ class ClassClayballSettingGeneral extends ClassClayballSettingWrap
                             <?php foreach ($checkgroup as $inx => $value): ?>
                                 <label for="clayballsetting_multiple_images_posttype_<?php echo $value; ?>"
                                        style="margin-right:20px;">
-                                    <input type="checkbox" name="clayballsetting_multiple_images_posttype[]" class="regular-text"
+                                    <input type="checkbox" name="clayballsetting_multiple_images_posttype[]"
+                                           class="regular-text"
                                            id="clayballsetting_multiple_images_posttype_<?php echo $value; ?>"
                                         <?php checked(in_array($value, $clayballsetting_multiple_images_posttype), 1); ?>
                                            value="<?php echo $value; ?>"/> <?php echo $value; ?>

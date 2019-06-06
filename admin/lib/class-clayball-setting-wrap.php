@@ -13,12 +13,15 @@ class ClassClayballSettingWrap
 
     public function __construct($menuitem = array())
     {
-        $this->menuitem = $menuitem;
+        $this->menuitem   = $menuitem;
         $this->regSection = 'ClayballSetting';
     }
-    public function ReturnRegSection(){
+
+    public function ReturnRegSection()
+    {
         return $this->regSection;
     }
+
     public function ReturnMenu()
     {
         return $this->menuitem;
@@ -37,7 +40,7 @@ background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1
 background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#ffffff\', endColorstr=\'#ffffff\',GradientType=0 ); /* IE6-9 */
-    margin: 20px 0;">'.__('ClayBall', 'clayball-lang').'</h1><form method="post" action="options.php">';
+    margin: 20px 0;">' . __('ClayBall', 'clayball-lang') . '</h1><form method="post" action="options.php">';
     }
 
     public function NavInit()
@@ -47,7 +50,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#ffffff\', e
         $html    = '<h2 class="nav-tab-wrapper">';
         foreach ($tabs as $tab => $name) {
             $class = ($tab == $current) ? 'nav-tab-active' : '';
-            $html  .= '<a class="nav-tab ' . $class . '" href="?page=' . $tab . '">' . __($name,'clayball-lang') . '</a>';
+            $html  .= '<a class="nav-tab ' . $class . '" href="?page=' . $tab . '">' . __($name, 'clayball-lang') . '</a>';
         }
         $html .= '</h2>';
         echo $html;
