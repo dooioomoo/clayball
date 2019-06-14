@@ -30,7 +30,7 @@ function clayball_get_custom_gallery()
     return $returnimg;
 }
 
-function clayball_create_custom_gallery()
+function clayball_create_custom_gallery_xzoom()
 {
     $img      = clayball_get_custom_gallery();
     $template = '<a href="%1$s"><img class="xzoom-gallery" width="80" src="%1$s" xpreview="%1$s" title="%2$s"></a>';
