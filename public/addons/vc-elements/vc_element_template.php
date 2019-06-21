@@ -29,7 +29,7 @@ class vcElement extends WPBakeryShortCode
                 'base' => 'Clayball_Homepage_NewsList_Table', //对应shortcode
                 'description' => __('极简模式新闻列表', 'Clayball-lang'), //远见说明
                 'category' => __('CLAYBALL', 'Clayball-lang'), //VC元件标签设置
-                'icon' => __CLAYBALLURI__ . '/assets/img/vc-icon.png',
+                'icon' => __CLAYBALLPLUGINURI__ . '/assets/img/vc-icon.png',
                 'params' => array(
 
                     array(

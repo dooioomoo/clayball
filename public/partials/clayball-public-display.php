@@ -55,5 +55,27 @@ function clayball_get_custom_gallery_first($img){
     if (is_array($img)&&count($img)>1)
     return $img[0];
 }
+
+function get_all_posttype(){
+
+    $checkgroup = array(
+        'post',
+        'page'
+    );
+    $args       = array(
+        'public' => true,
+        '_builtin' => false
+    );
+    $output     = 'names'; // 'names' or 'objects' (default: 'names')
+    $operator   = 'and'; // 'and' or 'or' (default: 'and')
+    $post_types = get_post_types($args, $output, $operator);
+    if ($post_types) { // If there are any custom public post types.
+        foreach ($post_types as $post_type) {
+            array_push($checkgroup, $post_type);
+        }
+    }
+    return $checkgroup;
+}
+
 ?>
 

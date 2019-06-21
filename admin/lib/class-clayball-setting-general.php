@@ -22,23 +22,8 @@ class ClassClayballSettingGeneral extends ClassClayballSettingWrap
 
     public function CreatePanel()
     {
-        $checkgroup = array(
-            'post',
-            'page'
-        );
-        $args       = array(
-            'public' => true,
-            '_builtin' => false
-        );
-        $output     = 'names'; // 'names' or 'objects' (default: 'names')
-        $operator   = 'and'; // 'and' or 'or' (default: 'and')
-        $post_types = get_post_types($args, $output, $operator);
-        if ($post_types) { // If there are any custom public post types.
-            foreach ($post_types as $post_type) {
-                array_push($checkgroup, $post_type);
-            }
-        }
 
+        $checkgroup = get_all_posttype();
         $clayballsetting_multiple_images_posttype = (array)get_option('clayballsetting_multiple_images_posttype', []);
 
 

@@ -153,6 +153,7 @@ class Clayball_Public {
         $vc_addons_files = array(
             'homepage-newslist-table.php',
             'company-outline.php',
+            'addons-clayball-post-slider.php',
         );
 
         foreach ($vc_addons_files as $filesname) {
