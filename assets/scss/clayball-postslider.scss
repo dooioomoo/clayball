@@ -47,7 +47,7 @@
     }
 
     &.swiper-slide-active {
-      border-color: #f7f7f7;
+      //border-color: #f7f7f7;
       @include transition(all .5s ease-out);
 
       &::before {
@@ -81,6 +81,7 @@
       border-bottom: 1px solid #eee;
       color: #aaa;
       padding-top: 10px;
+      line-height: initial;
     }
   }
 }
