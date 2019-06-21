@@ -101,7 +101,6 @@ class Clayball_Admin {
 	}
 
 	private function run_admin(){
-        require_once(__CLAYBALLPLUGINPATH__ . '/admin/partials/' . 'clayball-admin-display.php');
         require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'clayball-setting.php');
         require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'clayball-add-multiple-images.php');
         $this->admin_init();
