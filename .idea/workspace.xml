@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/clayball-postslider.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+            <state relative-caret-position="261">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -246,12 +246,12 @@
       <workItem from="1561083591347" duration="17641000" />
       <workItem from="1561111815008" duration="13000" />
       <workItem from="1561337770621" duration="128000" />
-      <workItem from="1561338461542" duration="223000" />
+      <workItem from="1561338461542" duration="850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36083000" />
+    <option name="totallyTimeSpent" value="36710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="23" width="1936" height="1065" extended-state="6" />
@@ -473,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/clayball-postslider.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+        <state relative-caret-position="261">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
         </state>
       </provider>
     </entry>
