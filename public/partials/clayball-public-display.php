@@ -21,7 +21,7 @@ function clayball_get_custom_gallery()
     global $post;
     $returnimg = array();
     $meta      = get_post_meta($post->ID);
-    $imggroup  = unserialize($meta['add_clayball_gallery_array'][0]);
+    $imggroup  = unserialize($meta['clayball_gallery_array'][0]);
     foreach ($imggroup as $img) {
         $temp['img']   = wp_get_attachment_url($img);
         $temp['title'] = $post->post_title;
