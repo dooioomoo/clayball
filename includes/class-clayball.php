@@ -128,6 +128,11 @@ class Clayball {
 
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/clayball-public-display.php';
 
+        /**
+         * autoload  composer files
+         */
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'vendor/autoload.php';
+
 		$this->loader = new Clayball_Loader();
 
 	}
