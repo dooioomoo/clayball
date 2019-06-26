@@ -99,41 +99,42 @@ class Clayball {
 	 */
 	private function load_dependencies() {
 
-		/**
+        /**
+         * autoload  composer files
+         */
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'vendor/autoload.php';
+        /**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-clayball-loader.php';
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-clayball-loader.php';
 
-		/**
+        /**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-clayball-i18n.php';
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-clayball-i18n.php';
 
-		/**
+        /**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-clayball-admin.php';
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-clayball-admin.php';
 
-		/**
+        /**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-clayball-public.php';
 
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/lib/class-clayball-plugin-barcode.php';
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/lib/class-clayball-plugin-breadcrumb.php';
 
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/clayball-public-shortcode.php';
 
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/clayball-public-display.php';
 
-        /**
-         * autoload  composer files
-         */
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'vendor/autoload.php';
 
-		$this->loader = new Clayball_Loader();
+        $this->loader = new Clayball_Loader();
 
 	}
 

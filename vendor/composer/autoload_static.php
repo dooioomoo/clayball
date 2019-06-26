@@ -11,12 +11,25 @@ class ComposerStaticInitd269b800dc4fa65cebe3f456782fb7e6
         array (
             'Picqer\\Barcode\\' => 15,
         ),
+        'B' => 
+        array (
+            'BarcodeBakery\\Common\\' => 21,
+            'BarcodeBakery\\Barcode\\' => 22,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Picqer\\Barcode\\' => 
         array (
             0 => __DIR__ . '/..' . '/picqer/php-barcode-generator/src',
+        ),
+        'BarcodeBakery\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barcode-bakery/barcode-common/src',
+        ),
+        'BarcodeBakery\\Barcode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barcode-bakery/barcode-1d/src',
         ),
     );
 

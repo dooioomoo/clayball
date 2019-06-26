@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Picqer\\Barcode\\' => array($vendorDir . '/picqer/php-barcode-generator/src'),
+    'BarcodeBakery\\Common\\' => array($vendorDir . '/barcode-bakery/barcode-common/src'),
+    'BarcodeBakery\\Barcode\\' => array($vendorDir . '/barcode-bakery/barcode-1d/src'),
 );
