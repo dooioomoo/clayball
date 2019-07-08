@@ -51,6 +51,8 @@ define( 'CLAYBALL_VERSION', '1.0.0' );
  */
 function activate_clayball() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-clayball-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'public/partials/clayball-public-shortcode.php';
+        require_once plugin_dir_path( __FILE__ ) . 'public/partials/clayball-public-display.php';
 	Clayball_Activator::activate();
 }
 
