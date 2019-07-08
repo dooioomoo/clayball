@@ -16,5 +16,3 @@ function create_clayball_setting_base_shortcode($atts)
     $options = null !== get_option($a['base']) ? esc_attr(get_option($a['base'])) : '';
     return $options;
 }
-
-?>

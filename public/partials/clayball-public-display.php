@@ -82,6 +82,3 @@ function get_all_posttype(){
     }
     return $checkgroup;
 }
-
-?>
-
