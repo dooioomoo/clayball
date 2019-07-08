@@ -21,6 +21,9 @@ function clayball_get_custom_gallery()
     global $post;
     $returnimg = array();
     $meta      = get_post_meta($post->ID);
+    if (empty($meta['clayball_gallery_array'][0])) {
+        return;
+    }
     $imggroup  = unserialize($meta['clayball_gallery_array'][0]);
     foreach ($imggroup as $img) {
         $temp['img']   = wp_get_attachment_url($img);
@@ -33,6 +36,9 @@ function clayball_get_custom_gallery()
 function clayball_create_custom_gallery_xzoom()
 {
     $img      = clayball_get_custom_gallery();
+    if (!$img) {
+        return ;
+    }
     $template = '<a href="%1$s"><img class="xzoom-gallery" width="80" src="%1$s" xpreview="%1$s" title="%2$s"></a>';
     ?>
     <div class="xzoom-container">
