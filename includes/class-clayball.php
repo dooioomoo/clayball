@@ -129,11 +129,6 @@ class Clayball {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/lib/class-clayball-plugin-barcode.php';
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/lib/class-clayball-plugin-breadcrumb.php';
 
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/clayball-public-shortcode.php';
-
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/clayball-public-display.php';
-
-
         $this->loader = new Clayball_Loader();
 
 	}
