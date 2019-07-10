@@ -120,7 +120,7 @@ class Clayball_Public {
         $this->clayball_clearn_files();
         $this->clayball_add_widgets();
         if ($this->clayball_check_plugin_installed('js_composer/js_composer.php')) {
-            add_action('vc_before_init', array($this, 'vc_before_init_actions'));
+            add_action('init', array($this, 'vc_before_init_actions'));
         }
     }
 
@@ -165,7 +165,6 @@ class Clayball_Public {
 
     public function clayball_check_plugin_installed($plugin_name=''){
         $active_plugins = apply_filters('active_plugins', get_option('active_plugins'));
-//        var_dump($active_plugins);
         return in_array($plugin_name,$active_plugins);
     }
 
