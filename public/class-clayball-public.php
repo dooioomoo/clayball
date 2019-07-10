@@ -120,7 +120,7 @@ class Clayball_Public {
         $this->clayball_clearn_files();
         $this->clayball_add_widgets();
         if ($this->clayball_check_plugin_installed('js_composer/js_composer.php')) {
-            add_action('init', array($this, 'vc_before_init_actions'));
+            add_action('init', array($this, 'vc_before_init_actions'),5,1);
         }
     }
 
