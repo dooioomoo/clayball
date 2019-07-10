@@ -16,6 +16,7 @@
  * get custom gallery
  */
 
+
 function clayball_get_custom_gallery()
 {
     global $post;
@@ -81,4 +82,9 @@ function get_all_posttype(){
         }
     }
     return $checkgroup;
+}
+
+function clayball_check_plugin_installed($plugin_name=''){
+    $active_plugins = apply_filters('active_plugins', get_option('active_plugins'));
+    return in_array($plugin_name,$active_plugins);
 }

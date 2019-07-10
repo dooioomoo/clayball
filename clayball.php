@@ -71,6 +71,9 @@ register_deactivation_hook( __FILE__, 'deactivate_clayball' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
+require_once plugin_dir_path( __FILE__ ) . 'public/partials/clayball-public-shortcode.php';
+require_once plugin_dir_path( __FILE__ ) . 'public/partials/clayball-public-display.php';
+
 require plugin_dir_path( __FILE__ ) . 'includes/class-clayball.php';
 
 /**
@@ -90,5 +93,3 @@ function run_clayball() {
 }
 run_clayball();
 
-	require_once plugin_dir_path( __FILE__ ) . 'public/partials/clayball-public-shortcode.php';
-    require_once plugin_dir_path( __FILE__ ) . 'public/partials/clayball-public-display.php';
