@@ -10,6 +10,7 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
     // Element Init
     function __construct()
     {
+
         add_action('init', array($this, 'vc_postslider_mapping'));
         add_shortcode('AddonsClayballPostSlider', array($this, 'vc_postslider_html'));
         add_action('wp_enqueue_scripts', array($this, 'Clayball_custom_styles'), 1);
@@ -50,6 +51,17 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                         "param_name"  => "posttypes",
                         "value"       => __("", "Clayball-lang"),
                         "description" => __("Enter description.", "Clayball-lang")
+                    ),
+                    array(
+                        'type'        => 'dropdown',
+                        'heading'     => __('Link', 'Clayball-lang'),
+                        'param_name'  => 'itemlink',
+                        'admin_label' => true,
+                        'value'       => array(
+                            'yes' => 'YES',
+                            'no'  => 'NO',
+                        ),
+                        'std'         => 'yes', // 默认选项
                     ),
                     array(
                         'type'        => 'dropdown',
@@ -106,6 +118,7 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                     'param'        => 10,
                     'posttypes'    => '',
                     'spacebetween' => '30',
+                    'itemlink'     => 'yes',
                     'taxonomy'     => false,
                     'term'         => false,
                 ),
@@ -137,22 +150,23 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
 //            $term        = explode(',', $term);
 //            $arg['term'] = $term;
 //        }
-        $loop = new WP_Query($arg);
+        $post_slider = new WP_Query($arg);
 
         ob_start();
         ?>
 
         <div class="swiper-container clayball-slider-container">
             <div class="swiper-wrapper">
-                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                <?php while ($post_slider->have_posts()) : $post_slider->the_post(); ?>
                     <div class="swiper-slide">
-                        <div class="thumbnail"><a href="<?php the_permalink(); ?>">
+                        <div class="thumbnail">
+                            <?php if($itemlink=='yes'): ?><a href="<?php the_permalink(); ?>"><?php endif;?>
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                            </a></div>
+                                <?php if($itemlink=='yes'): ?></a><?php endif;?></div>
                         <div class="content">
                             <div class="postdate"><?php echo get_the_date('Y/m'); ?></div>
-                            <div class="title"><a
-                                        href="<?php the_permalink(); ?>"><?php the_title('<h2 class="slider-title">', '</h2>'); ?></a>
+                            <div class="title"><?php if($itemlink=='yes'): ?><a
+                                        href="<?php the_permalink(); ?>"><?php endif;?><?php the_title('<h2 class="slider-title">', '</h2>'); ?><?php if($itemlink=='yes'): ?></a><?php endif;?>
                             </div>
                             <div class="context"></div>
                         </div>
@@ -222,9 +236,9 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
     {
 
         /*Enqueue The Styles*/
-        wp_enqueue_style('Clayball-cssgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/css/swiper.min.css', false, CLAYBALL_VERSION, 'screen, print');
-        wp_enqueue_style('Clayball-cssgroup-postslider', __CLAYBALLPLUGINURI__ . '/assets/css/clayball-postslider.css', false, CLAYBALL_VERSION, 'screen, print');
-        wp_enqueue_script('Clayball-jsgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/js/swiper.min.js', array('jquery'), CLAYBALL_VERSION, false);
+        wp_enqueue_style('Clayball-cssgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/css/swiper.min.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
+        wp_enqueue_style('Clayball-cssgroup-postslider', __CLAYBALLPLUGINURI__ . '/assets/css/clayball-postslider.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
+        wp_enqueue_script('Clayball-jsgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/js/swiper.min.js', array('jquery'), CLAYBALL_ADDONS_VERSION, false);
     }
 
 } // End Element Class
