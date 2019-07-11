@@ -156,7 +156,7 @@ class Clayball_Homepage_NewsList_Table extends WPBakeryShortCode
     public function Clayball_custom_styles()
     {
         /*Enqueue The Styles*/
-        wp_enqueue_style('Clayball-cssgroup-newslist', __CLAYBALLPLUGINURI__ . '/assets/css/homepage-newslist-table.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
+        wp_enqueue_style('Clayball-cssgroup-newslist', __CLAYBALLPLUGINURI__ . '/assets/css/homepage-newslist-table.css', false, CLAYBALL_VERSION, 'screen, print');
     }
 
 } // End Element Class

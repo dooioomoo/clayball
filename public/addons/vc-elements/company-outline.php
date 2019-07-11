@@ -140,7 +140,7 @@ if (!class_exists('Clayball_Company_outline')) {
         {
         
             /*Enqueue The Styles*/
-            wp_enqueue_style('Clayball-cssgroup-compout', __CLAYBALLPLUGINURI__ . '/assets/css/company-outlines.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
+            wp_enqueue_style('Clayball-cssgroup-compout', __CLAYBALLPLUGINURI__ . '/assets/css/company-outlines.css', false, CLAYBALL_VERSION, 'screen, print');
         }
 
     } // End Element Class
