@@ -165,7 +165,7 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                                 <?php if($itemlink=='yes'): ?></a><?php endif;?></div>
                         <div class="content">
                             <div class="postdate"><?php echo get_the_date('Y/m'); ?></div>
-                            <div class="title"><?php if($itemlink=='yes'): ?><a
+                            <div class="title"><?php if($itemlink=='YES'): ?><a
                                         href="<?php the_permalink(); ?>"><?php endif;?><?php the_title('<h2 class="slider-title">', '</h2>'); ?><?php if($itemlink=='yes'): ?></a><?php endif;?>
                             </div>
                             <div class="context"></div>

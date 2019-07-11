@@ -16,7 +16,6 @@
  * get custom gallery
  */
 
-
 function clayball_get_custom_gallery()
 {
     global $post;

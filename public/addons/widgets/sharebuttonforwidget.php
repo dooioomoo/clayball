@@ -115,7 +115,7 @@ class Clayball_Widget_ShareLink extends WP_Widget
     public function Clayball_custom_styles_sharelink()
     {
         /*Enqueue The Styles*/
-        wp_enqueue_style('clayball_cssgroup-widget-sharelink', __CLAYBALLPLUGINURI__ . '/assets/css/share-link.css', false, CLAYBALL_VERSION, 'screen, print');
+        wp_enqueue_style('clayball_cssgroup-widget-sharelink', __CLAYBALLPLUGINURI__ . '/assets/css/share-link.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
 
     }
 }
