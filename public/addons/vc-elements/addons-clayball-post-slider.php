@@ -236,9 +236,9 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
     {
 
         /*Enqueue The Styles*/
-        wp_enqueue_style('Clayball-cssgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/css/swiper.min.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
-        wp_enqueue_style('Clayball-cssgroup-postslider', __CLAYBALLPLUGINURI__ . '/assets/css/clayball-postslider.css', false, CLAYBALL_ADDONS_VERSION, 'screen, print');
-        wp_enqueue_script('Clayball-jsgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/js/swiper.min.js', array('jquery'), CLAYBALL_ADDONS_VERSION, false);
+        wp_enqueue_style('Clayball-cssgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/css/swiper.min.css', false, CLAYBALL_VERSION, 'screen, print');
+        wp_enqueue_style('Clayball-cssgroup-postslider', __CLAYBALLPLUGINURI__ . '/assets/css/clayball-postslider.css', false, CLAYBALL_VERSION, 'screen, print');
+        wp_enqueue_script('Clayball-jsgroup-swiper', __CLAYBALLPLUGINURI__ . '/assets/js/swiper.min.js', array('jquery'), CLAYBALL_VERSION, false);
     }
 
 } // End Element Class
