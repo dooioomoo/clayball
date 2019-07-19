@@ -64,6 +64,16 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                         'std'         => 'yes', // 默认选项
                     ),
                     array(
+                        'type'        => 'textfield', //表单类型
+                        'class'       => 'field-class', // 使用class名
+                        'heading'     => __('Autoplay', 'Clayball-lang'), // 标题
+                        'param_name'  => 'autoplay', //传参变量
+                        'value'       => __('0', 'Clayball-lang'), // 数值
+                        'description' => __('Autoplay Parameters 0=>stop >0=>play', 'Clayball-lang'), //说明
+                        'admin_label' => false,
+                        'weight'      => 0,
+                    ),
+                    array(
                         'type'        => 'dropdown',
                         'heading'     => __('Taxonomy', 'Clayball-lang'),
                         'param_name'  => 'taxonomy',
@@ -121,6 +131,7 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                     'itemlink'     => 'yes',
                     'taxonomy'     => false,
                     'term'         => false,
+                    'autoplay'     => 0,
                 ),
                 $atts
             )
@@ -183,7 +194,7 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
         <!-- Initialize Swiper -->
         <script>
             jQuery(document).ready(function ($) {
-                var swiper = new Swiper('.clayball-slider-container', {
+                var clayball_swiper = new Swiper('.clayball-slider-container', {
                     cssWidthAndHeight: true,
                     visibilityFullFit: true,
                     autoResize: false,
@@ -191,6 +202,11 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                     centeredSlides: true,
                     spaceBetween: <?php echo $spacebetween;?>,
                     loop: true,
+                    <?php if ($autoplay && $autoplay > 0) : ?>
+                    autoplay: {
+					    delay: <?php echo $autoplay;?>,
+					  },
+                    <?php endif;?>
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true,
@@ -203,6 +219,16 @@ class AddonsClayballPostSlider extends WPBakeryShortCode
                         prevEl: '.swiper-button-prev',
                     },
                 });
+                <?php if ($autoplay && $autoplay > 0) : ?>
+					$('.clayball-slider-container').on('mouseenter', function(e){
+					// console.log('stop autoplay');
+					clayball_swiper.autoplay.stop();
+					})
+					$('.clayball-slider-container').on('mouseleave', function(e){
+					// console.log('start autoplay');
+					clayball_swiper.autoplay.start();
+					})
+            	<?php endif;?>
             });
 
         </script>
