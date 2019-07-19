@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              ryan.asdraw.com
- * @since             1.0.0
+ * @since             1.5.7
  * @package           Clayball
  *
  * @wordpress-plugin
  * Plugin Name:       ClayBall
  * Plugin URI:        www.fduit.net
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           1.5.7
  * Author:            jevinsong
  * Author URI:        ryan.asdraw.com
  * License:           GPL-2.0+
@@ -42,7 +42,7 @@ define('__CLAYBALLPLUGINURI__', plugins_url().'/'.$masterfolder);
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'CLAYBALL_VERSION', '1.5.5' );
+define( 'CLAYBALL_VERSION', '1.5.7' );
 
 /**
  * The code that runs during plugin activation.
