@@ -6,12 +6,12 @@
  * Time: 11:31
  */
 
-add_action( 'admin_init', 'clayball_custom_admin_menu');
+//add_action( 'admin_init', 'clayball_custom_admin_menu');
 function clayball_custom_admin_menu()
 {
     $current_user = wp_get_current_user();
     global $menu, $submenu;
-    if ($current_user->user_login != '3uweb') :
+    if ($current_user->user_login != 'ryan') :
         foreach ($menu as $mkey => $mval) {
             if (in_array($mval[2], [
                 'edit.php?post_type=project',
