@@ -1,0 +1,170 @@
+[
+    {
+        "name": "barcode-bakery/barcode-1d",
+        "version": "6.0.0",
+        "version_normalized": "6.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "packages/barcode-1d",
+            "reference": "6265101593d875180520f4668d13745cc239bf25"
+        },
+        "require": {
+            "ext-gd": "*",
+            "php": ">=5.6"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "BarcodeBakery\\Barcode\\": "src"
+            }
+        },
+        "license": [
+            "Commercial",
+            "CC-BY-NC-ND-4.0"
+        ],
+        "authors": [
+            {
+                "name": "Jean-Sébastien Goupil",
+                "email": "contact@barcodebakery.com"
+            }
+        ],
+        "description": "Generates 1D barcodes from a PHP server to a file or HTML document.",
+        "homepage": "http://www.barcodebakery.com",
+        "keywords": [
+            "bakery",
+            "barcode",
+            "codabar",
+            "code11",
+            "code128",
+            "code39",
+            "code39extended",
+            "code93",
+            "ean-13",
+            "ean-8",
+            "ean13",
+            "ean8",
+            "generator",
+            "i25",
+            "isbn",
+            "msi",
+            "s25",
+            "upc-a",
+            "upc-e",
+            "upcext2",
+            "upcext5"
+        ],
+        "support": {
+            "email": "contact@barcodebakery.com",
+            "docs": "http://www.barcodebakery.com"
+        }
+    },
+    {
+        "name": "barcode-bakery/barcode-common",
+        "version": "6.0.0",
+        "version_normalized": "6.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "packages/barcode-common",
+            "reference": "f85765ce48aaa04986bb507ac21b08d196479e0d"
+        },
+        "require": {
+            "ext-gd": "*",
+            "php": ">=5.6"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "BarcodeBakery\\Common\\": "src"
+            }
+        },
+        "license": [
+            "Commercial",
+            "CC-BY-NC-ND-4.0"
+        ],
+        "authors": [
+            {
+                "name": "Jean-Sébastien Goupil",
+                "email": "contact@barcodebakery.com"
+            }
+        ],
+        "description": "Base code for generating barcode with the Barcode Bakery library. See barcode-bakery/barcode-1d.",
+        "homepage": "http://www.barcodebakery.com",
+        "support": {
+            "email": "contact@barcodebakery.com",
+            "docs": "http://www.barcodebakery.com"
+        }
+    },
+    {
+        "name": "picqer/php-barcode-generator",
+        "version": "v0.3",
+        "version_normalized": "0.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/picqer/php-barcode-generator.git",
+            "reference": "2e4d5b1f7f04fdb348d0721ada65963dac6f0c0c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/picqer/php-barcode-generator/zipball/2e4d5b1f7f04fdb348d0721ada65963dac6f0c0c",
+            "reference": "2e4d5b1f7f04fdb348d0721ada65963dac6f0c0c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^5.3"
+        },
+        "time": "2019-01-12T09:29:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Picqer\\Barcode\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPLv3"
+        ],
+        "authors": [
+            {
+                "name": "Nicola Asuni",
+                "email": "info@tecnick.com",
+                "homepage": "http://nicolaasuni.tecnick.com"
+            },
+            {
+                "name": "Casper Bakker",
+                "email": "info@picqer.com"
+            }
+        ],
+        "description": "An easy to use, non-bloated, barcode generator in PHP. Creates SVG, PNG, JPG and HTML images from the most used 1D barcode standards.",
+        "homepage": "http://github.com/picqer/php-barcode-generator",
+        "keywords": [
+            "CODABAR",
+            "Code11",
+            "Code93",
+            "EAN13",
+            "KIX",
+            "KIXCODE",
+            "MSI",
+            "POSTNET",
+            "Pharma",
+            "Standard 2 of 5",
+            "barcode",
+            "barcode generator",
+            "code128",
+            "code39",
+            "ean",
+            "html",
+            "jpeg",
+            "jpg",
+            "php",
+            "png",
+            "svg",
+            "upc"
+        ]
+    }
+]

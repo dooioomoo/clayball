@@ -1,0 +1,14 @@
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin box-shadow($transition...) {
+
+  -webkit-box-shadow: $transition;
+  -moz-box-shadow: $transition;
+  box-shadow: $transition;
+
+}

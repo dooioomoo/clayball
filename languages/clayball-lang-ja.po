@@ -1,0 +1,236 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ClayBall\n"
+"POT-Creation-Date: 2019-06-06 18:24+0900\n"
+"PO-Revision-Date: 2019-06-06 18:24+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: clayball.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/lib/class-clayball-setting-base.php:33
+msgid "COMPANY NAME"
+msgstr "会社名"
+
+#: admin/lib/class-clayball-setting-base.php:39
+msgid "TEL"
+msgstr "電話番号"
+
+#: admin/lib/class-clayball-setting-base.php:45
+msgid "ZIPCODE"
+msgstr "郵便番号"
+
+#: admin/lib/class-clayball-setting-base.php:51
+msgid "ADDRESS"
+msgstr "住所"
+
+#: admin/lib/class-clayball-setting-general.php:48
+msgid "Multiple Image Upload"
+msgstr "投稿のギャラリー設定"
+
+#: admin/lib/class-clayball-setting-general.php:52
+msgid "POST TYPE"
+msgstr "投稿ライプ"
+
+#: admin/lib/class-clayball-setting-general.php:67
+msgid ""
+"Enable Multiple images for pages, posts and custom post types. Note: By "
+"default pages only."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: admin/lib/class-clayball-setting-wrap.php:40
+#: admin/lib/clayball-setting.php:34
+msgid "ClayBall"
+msgstr ""
+
+#: admin/lib/clayball-add-multiple-images.php:20
+msgid "Featured Gallery"
+msgstr "投稿のギャラリー"
+
+#: admin/lib/clayball-add-multiple-images.php:29
+msgid "Set featured gallery"
+msgstr "ギャラリー設定"
+
+#: admin/lib/clayball-add-multiple-images.php:63
+#: admin/lib/clayball-add-multiple-images.php:65
+msgid "Select image"
+msgstr "画像を選択"
+
+#: admin/lib/clayball-setting.php:19 admin/lib/clayball-setting.php:33
+#: admin/lib/clayball-setting.php:42 admin/lib/clayball-setting.php:43
+msgid "General Setting"
+msgstr "機能設定"
+
+#: admin/lib/clayball-setting.php:20 admin/lib/clayball-setting.php:56
+#: admin/lib/clayball-setting.php:57
+msgid "Informations"
+msgstr "サイト情報"
+
+#: public/addons/vc-elements/company-outline.php:30
+msgid "会社概要"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:32
+msgid "会社概要排列"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:33
+#: public/addons/vc-elements/homepage-newslist-table.php:32
+#: public/addons/vc-elements/vc_element_template.php:31
+msgid "CLAYBALL"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:39
+msgid "custome class name"
+msgstr "カスタムスタイル"
+
+#: public/addons/vc-elements/company-outline.php:42
+msgid "set custome class name"
+msgstr "カスタマイズスタイルを設定"
+
+#: public/addons/vc-elements/company-outline.php:45
+#: public/addons/vc-elements/company-outline.php:59
+#: public/addons/vc-elements/company-outline.php:81
+#: public/addons/vc-elements/homepage-newslist-table.php:46
+#: public/addons/vc-elements/homepage-newslist-table.php:56
+#: public/addons/vc-elements/homepage-newslist-table.php:62
+#: public/addons/vc-elements/vc_element_template.php:45
+#: public/addons/vc-elements/vc_element_template.php:60
+#: public/addons/vc-elements/vc_element_template.php:66
+msgid "normal"
+msgstr "基本"
+
+#: public/addons/vc-elements/company-outline.php:49
+msgid "Style"
+msgstr "スタイル"
+
+#: public/addons/vc-elements/company-outline.php:58
+msgid "Choice a NEWS type"
+msgstr "新聞のカテゴリを選択"
+
+#: public/addons/vc-elements/company-outline.php:71
+msgid "Title"
+msgstr "タイトル"
+
+#: public/addons/vc-elements/company-outline.php:77
+msgid "content"
+msgstr "内容"
+
+#: public/addons/vc-elements/company-outline.php:85
+#: public/addons/vc-elements/homepage-newslist-table.php:60
+#: public/addons/vc-elements/vc_element_template.php:64
+msgid "Css"
+msgstr ""
+
+#: public/addons/vc-elements/company-outline.php:87
+msgid "Style Setting"
+msgstr "スタイル設定"
+
+#: public/addons/vc-elements/homepage-newslist-table.php:29
+msgid "NEWS LIST"
+msgstr "新聞リスト"
+
+#: public/addons/vc-elements/homepage-newslist-table.php:31
+msgid "a sample news list for frontpage"
+msgstr "簡単なお知らせ機能"
+
+#: public/addons/vc-elements/homepage-newslist-table.php:40
+msgid "news count"
+msgstr "新聞数"
+
+#: public/addons/vc-elements/homepage-newslist-table.php:43
+#: public/addons/vc-elements/vc_element_template.php:42
+msgid "Count of news displayed"
+msgstr "新聞リストの数"
+
+#: public/addons/vc-elements/homepage-newslist-table.php:50
+msgid "category"
+msgstr "カテゴリ"
+
+#: public/addons/vc-elements/homepage-newslist-table.php:55
+msgid "choice a category"
+msgstr "カテゴリを選択"
+
+#: public/addons/vc-elements/vc_element_template.php:28
+msgid "基础新闻列表"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:30
+msgid "极简模式新闻列表"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:39
+msgid "Count"
+msgstr "件数"
+
+#: public/addons/vc-elements/vc_element_template.php:41
+msgid "Field name"
+msgstr "フェルトの名"
+
+#: public/addons/vc-elements/vc_element_template.php:49
+msgid "Foo"
+msgstr ""
+
+#: public/addons/vc-elements/vc_element_template.php:59
+msgid "The description"
+msgstr "説明"
+
+#: public/addons/widgets/add-login-button.php:19
+msgid "Member Login"
+msgstr ""
+
+#: public/addons/widgets/add-login-button.php:71
+#: public/addons/widgets/sharebuttonforwidget.php:71
+msgid "Title:"
+msgstr "タイトル："
+
+#: public/addons/widgets/sharebuttonforwidget.php:27
+msgid "ClayBall Share Buttons"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:77
+msgid "Facebook:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:83
+msgid "Twitter:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:89
+msgid "Google+:"
+msgstr ""
+
+#: public/addons/widgets/sharebuttonforwidget.php:95
+msgid "Instagram:"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "www.fduit.net"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "jevinsong"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "ryan.asdraw.com"
+msgstr ""

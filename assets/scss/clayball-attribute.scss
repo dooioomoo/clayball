@@ -1,0 +1,35 @@
+.clayballsetting_attribute_itemWrap, .clayballsetting_attribute_item {
+  &::before, &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.items-attributes {
+  .items-attributes-item {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 0 auto;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .item-title {
+      flex: 30%;
+      background: gray;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding:3px 20px 3px 3px;
+    }
+
+    .item-value {
+      flex: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left:20px;
+    }
+  }
+}

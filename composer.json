@@ -1,0 +1,16 @@
+{
+  "name": "dooioomoo/clayball",
+  "description": "the plugin for wordpress normal project",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ryan",
+      "email": "dooioomoo.work@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "picqer/php-barcode-generator" : "^0.3"
+  }
+}
