@@ -14,7 +14,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
         public function AddMetaboxToPosttype()
         {
             wp_enqueue_script('Clayball-js-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/js/multiple-images.js', array('jquery', 'jquery-ui-selectable'), CLAYBALL_VERSION, false);
-            wp_enqueue_style('Clayball-cssgroup-jquery-ui', 'http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', false, CLAYBALL_VERSION, 'screen, print');
+            wp_enqueue_style('Clayball-cssgroup-jquery-ui', __CLAYBALLPLUGINURI__ . '/assets/css/jquery-ui.css', false, CLAYBALL_VERSION, 'screen, print');
             wp_enqueue_style('Clayball-cssgroup-multipleimages', __CLAYBALLPLUGINURI__ . '/assets/css/multiple-images.css', false, CLAYBALL_VERSION, 'screen, print');
             foreach ($this->clayballsetting_multiple_images_posttype as $posttype) {
                 add_meta_box('custom_postimage_meta_box', __('Featured Gallery', 'clayball-lang'), array($this, 'CustomPostimagesFunc'), $posttype, 'side', 'low');
