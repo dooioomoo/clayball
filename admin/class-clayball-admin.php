@@ -103,7 +103,7 @@ class Clayball_Admin {
 
 	private function run_admin(){
         wp_enqueue_style( $this->plugin_name.'-attributes', __CLAYBALLPLUGINURI__ . '/assets/css/clayball-attribute.css', array(), $this->version, 'all' );
-        wp_enqueue_script( $this->plugin_name.'-attributes', plugin_dir_url( __FILE__ ) . 'js/clayball-attribute.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->plugin_name.'-attributes', plugin_dir_url( __FILE__ ) . 'js/clayball-attribute.js', array( 'jquery','jquery-ui-sortable' ), $this->version, false );
         require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'clayball-setting.php');
         require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'clayball-add-multiple-images.php');
         require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'clayball-add-attributes.php');

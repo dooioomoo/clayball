@@ -67,10 +67,11 @@ class ClassClayballSettingAttribute extends ClassClayballSettingWrap
                     <th scope="row"><?php echo __('LABEL AND VALUES' , 'clayball-lang'); ?></th>
                     <td>
                         <div class="clayballsetting_attribute_wrap">
-                            <ul class="clayballsetting_attribute_itemWrap">
+                            <ul class="clayballsetting_attribute_itemWrap selector">
                                 <?php if ( !isset($clayballsetting_attribute_value['name'])): ?>
                                     <li class="clayballsetting_attribute_item">
                                         <div class="actions">
+                                            <label class="handle"><span class="dashicons dashicons-move"></span></label>
                                             <label class=""><?php echo __('タグ'); ?>
                                                 <input type="text" value=""
                                                        name="clayballsetting_attribute_value[name][]"></label>
@@ -87,6 +88,7 @@ class ClassClayballSettingAttribute extends ClassClayballSettingWrap
                                         ?>
                                         <li class="clayballsetting_attribute_item">
                                             <div class="actions">
+                                                <label class="handle"><span class="dashicons dashicons-move"></span></label>
                                                 <label class=""><?php echo __('タグ'); ?>
                                                     <input type="text" value="<?php echo $value; ?>"
                                                            name="clayballsetting_attribute_value[name][]"></label>
