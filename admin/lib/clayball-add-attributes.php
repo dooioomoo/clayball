@@ -37,6 +37,8 @@ if ( !class_exists('Clayball_Add_Attributes') ) {
                                 <?php
                                     if (isset($items[$value])){
                                         $theVal = $items[$value];
+                                    }elseif(count($items)>1){
+                                        $theVal = '';
                                     }else{
                                         $theVal = $itemsForm['value'][$key];
                                     }
