@@ -10,11 +10,7 @@
                 axis: "y",
                 handle: ".handle",
                 helper: "clone",
-                placeholder: "sortable-placeholder",
-                containment: ".clayballsetting_attribute_wrap",
                 sort: function( event, ui ) {
-                    
-                    // console.log(ui.height());
                 },
             }
         ).disableSelection();
