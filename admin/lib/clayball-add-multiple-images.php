@@ -64,7 +64,7 @@ if (!class_exists('Clayball_Add_Multiple_Images')) {
                         button: {
                             text: '<?php _e('Select image', 'default'); ?>'
                         },
-                        multiple: true
+                        multiple: 'add'
                     });
                     custom_postimage_uploader.on('select', function () {
                         var selection = custom_postimage_uploader.state().get('selection');

@@ -42,7 +42,7 @@ function clayball_create_custom_gallery_xzoom()
     $template = '<a href="%1$s"><img class="xzoom-gallery" width="80" src="%1$s" xpreview="%1$s" title="%2$s"></a>';
     ?>
     <div class="xzoom-container">
-        <?php $thumb = clayball_get_custom_gallery_first($img) ?>
+        <?php $thumb = clayball_get_custom_gallery_first($img);   ?>
         <div class="xzoom-wrap">
         <?php echo sprintf('<img class="xzoom" src="%1$s" alt="%1$s" xoriginal="%1$s"" xpreview="%1$s" title="%2$s">', $thumb['img'],$thumb['title']);?>
         </div>
@@ -58,7 +58,7 @@ function clayball_create_custom_gallery_xzoom()
 }
 
 function clayball_get_custom_gallery_first($img){
-    if (is_array($img)&&count($img)>1)
+    if (is_array($img)&&count($img)>=1)
     return $img[0];
 }
 
