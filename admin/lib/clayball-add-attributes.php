@@ -45,7 +45,7 @@ if ( !class_exists('Clayball_Add_Attributes') ) {
                                 ?>
                                 <input type="text" class="large-text"
                                        name="clayballsetting_attribute_value[<?php echo $value; ?>]"
-                                       value="<?php echo $theVal; ?>">
+                                       value="<?php echo esc_attr($theVal); ?>">
                             </div>
                         </li>
                     <?php endforeach; ?>
@@ -64,7 +64,7 @@ if ( !class_exists('Clayball_Add_Attributes') ) {
             if ( isset($_POST['custom_Attributes_meta_box_nonce']) && wp_verify_nonce($_POST['custom_Attributes_meta_box_nonce'] , 'custom_Attributes_meta_box') ) {
 
                 if ( isset($_POST['clayballsetting_attribute_value']) && intval($_POST['clayballsetting_attribute_value']) != '' ) {
-                    update_post_meta($post_id , 'clayball_att_array' , $_POST['clayballsetting_attribute_value']);
+                    update_post_meta($post_id , 'clayball_att_array' , esc_attr($_POST['clayballsetting_attribute_value']));
                 } else {
                     update_post_meta($post_id , 'clayball_att_array' , '');
                 }

@@ -94,7 +94,7 @@ class ClassClayballSettingAttribute extends ClassClayballSettingWrap
                                                            name="clayballsetting_attribute_value[name][]"></label>
                                                 <label class=""><?php echo __('Normal'); ?>
                                                     <input type="text"
-                                                           value="<?php echo $clayballsetting_attribute_value['value'][$key]; ?>"
+                                                           value="<?php echo esc_attr($clayballsetting_attribute_value['value'][$key]); ?>"
                                                            name="clayballsetting_attribute_value[value][]"></label>
                                                 <input type="button" name="del-attribute"
                                                        class="button" value="DELETE">
