@@ -3,9 +3,10 @@ if ( !class_exists('Clayball_Add_Attributes') ) {
 
     class Clayball_Add_Attributes
     {
+        private $clayballsetting_attribute_posttype;
         public function __construct()
         {
-            $this->$clayballsetting_attribute_posttype = !is_array(get_option('clayballsetting_attribute_posttype' , [])) ? ['page'] : get_option('clayballsetting_attribute_posttype' , []);
+            $this->clayballsetting_attribute_posttype = !is_array(get_option('clayballsetting_attribute_posttype' , [])) ? ['page'] : get_option('clayballsetting_attribute_posttype' , []);
             add_action('add_meta_boxes' , array ($this , 'AddMetaboxToPosttype'));
             add_action('save_post' , array ($this , 'CustomAttributesSave'));
         }
@@ -15,7 +16,7 @@ if ( !class_exists('Clayball_Add_Attributes') ) {
             wp_enqueue_style('Clayball-cssgroup-jquery-ui' , 'http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' , FALSE , CLAYBALL_VERSION , 'screen, print');
             $itemsForm = (array)get_option('clayballsetting_attribute_value' , []);
             if ( isset($itemsForm['name']) )
-                foreach ( $this->$clayballsetting_attribute_posttype as $posttype ) {
+                foreach ( $this->clayballsetting_attribute_posttype as $posttype ) {
                     add_meta_box('custom_attributes_meta_box' , __('属性 [clayball_att_array]' , 'clayball-lang') , array ($this , 'CustomAttributesFunc') , $posttype , 'advanced' , 'low');
                 }
         }
