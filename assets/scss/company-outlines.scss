@@ -2,21 +2,32 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: /* 1 */
+          auto /* 2 */
+          1fr;
+  grid-template-rows: /* 3 */
+          auto /* 4 */
+          1fr /* 5 */
+          auto;
+  //flex-flow:row wrap;
 
   dt, dd {
     box-sizing: border-box;
     padding: 10px;
     margin: 0px;
+    flex: auto;
+    display: flex;
   }
 
   dt {
-    float: left;
-    width: 35%;
-    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
   }
 
   dd {
-    margin-left: 35%;
+    align-items: center;
+    justify-content: flex-start;
     background-color: transparent;
   }
 
@@ -29,7 +40,8 @@
   }
 
   &.table-style {
-    border: 1px solid #bdc8ca;
+    border-top: 1px solid #bdc8ca;
+    border-left: 1px solid #bdc8ca;
     background-color: transparent;
 
     dt {
@@ -37,16 +49,15 @@
     }
 
     dd {
-      border-left: 1px dotted #bdc8ca;
     }
 
     dt, dd {
-
+      border-bottom: 1px solid #bdc8ca;
+      border-right: 1px solid #bdc8ca;
     }
 
     dd ~ dt,
     dd ~ dd {
-      border-top: 1px solid #bdc8ca;
     }
   }
 
@@ -55,27 +66,13 @@
     }
 
     dt, dd {
-      padding: 20px;
+      border-bottom: 1px solid #eee;
     }
 
     dd ~ dt {
-      border-top: 1px solid #eee;
-      position: relative;
-
-      &:after {
-        content: "";
-        display: block;
-        border-top: 3px solid #eee;
-        position: absolute;
-        top: -2px;
-        left: 0px;
-        height: 3px;
-        width: 100%;
-      }
     }
 
     dd ~ dd {
-      border-top: 1px solid #f3f3f3;
     }
   }
 }
@@ -88,37 +85,22 @@
   .Clayball-company_outlines_list {
     &.line-style {
       dt {
-        content: '';
-        display: block;
-        border-top: 3px solid #eee;
-        position: absolute;
-        top: -2px;
-        left: 0px;
-        height: 3px;
-        width: 100%;
+
       }
 
       dd {
       }
 
       dt, dd {
-        padding: 20px;
-        float: none;
-        width: 100%;
-        margin: 0px;
+
       }
 
       dd ~ dt {
-        border-top: 1px solid #eee;
-        position: relative;
 
-        &:after {
-          content: none;
-        }
+
       }
 
       dd ~ dd {
-        border-top: 1px solid #f3f3f3;
       }
     }
   }
