@@ -18,13 +18,11 @@ if (!class_exists('ClayBall_Setting')) {
             $this->menuitem = array(
                 'clayball-settings' => __('General Setting', 'clayball-lang'),
                 'clayball-settings-base' => __('Informations', 'clayball-lang'),
-                'clayball-settings-breadcrumb' => __('Breadcrumb', 'clayball-lang'),
                 'clayball-settings-attribute' => __('Attribute', 'clayball-lang'),
             );
 
             add_action('admin_menu', array($this, 'ClayballSettingMenuInit'));
             add_action('admin_menu', array($this, 'ClayballSubmenuBaseInit'));
-            add_action('admin_menu', array($this, 'ClayballSubmenuBreadcrumbInit'));
             add_action('admin_menu', array($this, 'ClayballSubmenuAttributeInit'));
         }
 
@@ -62,20 +60,6 @@ if (!class_exists('ClayBall_Setting')) {
                 'edit_posts',
                 'clayball-settings-base',
                 array($this->clayball_base, 'index')
-            );
-        }
-
-        public function ClayballSubmenuBreadcrumbInit()
-        {
-            require_once(__CLAYBALLPLUGINPATH__ . '/admin/lib/' . 'class-clayball-setting-breadcrumb.php');
-            $this->clayball_breadcrumb = new ClassClayballSettingBreadcrumb($this->menuitem);
-            add_submenu_page(
-                'clayball-settings',
-                __('Breadcrumb', 'clayball-lang'),
-                __('Breadcrumb', 'clayball-lang'),
-                'edit_posts',
-                'clayball-settings-breadcrumb',
-                array($this->clayball_breadcrumb, 'index')
             );
         }
 

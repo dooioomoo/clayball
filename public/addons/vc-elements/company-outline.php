@@ -123,8 +123,8 @@ if (!class_exists('Clayball_Company_outline')) {
                 <dl class="Clayball-company_outlines_list <?php echo esc_attr($changestyle); ?>">
                     <?php
                     foreach ($comp_outlines as $comp_columns) {
-                        echo '<dt class="Clayball-compout_title">' . $comp_columns['comp_title'] . '</dt>';
-                        echo $comp_columns['comp_content'] != null || $comp_columns['comp_content'] != '' ? '<dd class="Clayball-compout_value">' . nl2br($comp_columns['comp_content']) . '</dd>' : '<dd class="Clayball-compout_value">&nbsp;</dd>';
+                        echo '<dt class="Clayball-compout_title"><span>' . $comp_columns['comp_title'] . '</span></dt>';
+                        echo $comp_columns['comp_content'] != null || $comp_columns['comp_content'] != '' ? '<dd class="Clayball-compout_value"><span>' . do_shortcode(nl2br($comp_columns['comp_content'])) . '</span></dd>' : '<dd class="Clayball-compout_value"><span>&nbsp;</span></dd>';
                     }
                     ?>
                 </dl>
