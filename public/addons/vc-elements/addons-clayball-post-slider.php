@@ -165,24 +165,33 @@
 
             <div class="swiper-container clayball-slider-container">
                 <div class="swiper-wrapper">
-                    <?php while ($post_slider->have_posts()) : $post_slider->the_post(); ?>
+                    <?php while ($post_slider->have_posts()) : $post_slider->the_post();
+                        $titleSize = ""; ?>
                         <div class="swiper-slide">
-                            <div class="thumbnail">
-                                <?php if ($itemlink == 'yes'): ?><a href="<?php the_permalink(); ?>"><?php endif; ?>
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                                    <?php if ($itemlink == 'yes'): ?></a><?php endif; ?></div>
-                            <div class="content">
+                            <?php if (get_the_post_thumbnail_url()):$titleSize = "has-thumb"; ?>
+                                <div class="thumbnail">
+                                    <span class="background-image"
+                                          style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                                    <?php if ($itemlink == 'YES'): ?><a href="<?php the_permalink(); ?>">
+                                            &nbsp;
+                                        </a><?php endif; ?></span></div>
                                 <div class="postdate"><?php echo get_the_date('Y/m'); ?></div>
-                                <div class="title">
-                                    <?php if($itemlink=='YES'): ?>
-                                    <a href="<?php the_permalink(); ?>">
+                            <?php endif; ?>
+                            <div class="content">
+                                <div class="title <?php echo $titleSize; ?>">
+                                    <?php if ($itemlink == 'YES'): ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_title('<h2 class="slider-title">', '</h2>'); ?>
+                                        </a>
+                                    <?php else: ?>
                                         <?php the_title('<h2 class="slider-title">', '</h2>'); ?>
-                                    </a>
-                                    <?php else:?>
-                                        <?php the_title('<h2 class="slider-title">', '</h2>'); ?>
-                                    <?php endif;?>
+                                    <?php endif; ?>
                                 </div>
-                                <div class="context"></div>
+                                <?php if (!get_the_post_thumbnail_url()): ?>
+                                    <div class="postdate"><?php echo get_the_date('Y/m'); ?></div>
+                                    <div class="context"><?php echo get_the_excerpt(); ?></div>
+                                <?php endif; ?>
+
                             </div>
 
                         </div>
@@ -190,10 +199,10 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
 
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             <!-- Initialize Swiper -->
             <script>
                 jQuery(document).ready(function ($) {

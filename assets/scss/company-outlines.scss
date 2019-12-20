@@ -13,15 +13,12 @@
   dt {
     float: left;
     width: 35%;
+    text-align: center;
   }
 
   dd {
     margin-left: 35%;
     background-color: transparent;
-  }
-
-  dd ~ dt,
-  dd ~ dd {
   }
 
   .row2 + dd:after {
@@ -31,51 +28,63 @@
   &.table-style {
     border: 1px solid #bdc8ca;
     background-color: transparent;
+    display: table;
+
+    dl.line-row {
+      display: table-row;
+
+      &:first-of-type {
+        dt, dd {
+          border-top: none;
+        }
+      }
+    }
 
     dt {
-      padding-bottom: 10px;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     dd {
       border-left: 1px dotted #bdc8ca;
+      padding-left: 20px;
     }
 
     dt, dd {
-
-    }
-
-    dd ~ dt,
-    dd ~ dd {
-      border-top: 1px solid #bdc8ca;
+      float: none;
+      margin: 0;
+      display: table-cell;
+      width: auto;
+      border-top: 1px dotted #bdc8ca;
     }
   }
 
   &.line-style {
-    dd {
+    display: table;
+    //table-layout:fixed;
+
+    dl.line-row {
+      display: table-row;
     }
 
     dt, dd {
       padding: 20px;
+      display: table-cell;
+      margin: 0;
+      float: none;
+      width: initial;
+      border-style: solid;
+      border-color: #f3f3f3;
     }
 
-    dd ~ dt {
-      border-top: 1px solid #eee;
-      position: relative;
-
-      &:after {
-        content: "";
-        display: block;
-        border-top: 3px solid #eee;
-        position: absolute;
-        top: -2px;
-        left: 0px;
-        height: 3px;
-        width: 100%;
-      }
+    dt {
+      text-align: center;
+      border-width: 0 0 5px;
     }
 
-    dd ~ dd {
-      border-top: 1px solid #f3f3f3;
+    dd {
+      border-width: 0 0 1px;
     }
   }
 }
@@ -84,41 +93,44 @@
   *自适应调试模块
 */
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 990px) {
   .Clayball-company_outlines_list {
     &.line-style {
-      dt {
-        content: '';
+      dl.line-row {
+        margin-bottom: 20px;
+        border: 3px solid rgba(black, .1);
+        border-radius: 15px;
         display: block;
-        border-top: 3px solid #eee;
-        position: absolute;
-        top: -2px;
-        left: 0px;
-        height: 3px;
-        width: 100%;
-      }
-
-      dd {
       }
 
       dt, dd {
-        padding: 20px;
+        padding: 10px;
         float: none;
         width: 100%;
-        margin: 0px;
+        margin: 0;
+        border: none;
+        text-align: center;
+        display: block;
+        position: relative;
       }
 
-      dd ~ dt {
-        border-top: 1px solid #eee;
-        position: relative;
-
-        &:after {
-          content: none;
+      dt {
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          background: rgba(black, .1);
+          width: 80%;
+          height: 3px;
+          border-radius: 500%;
+          bottom: 0;
         }
       }
 
-      dd ~ dd {
-        border-top: 1px solid #f3f3f3;
+      dd {
+        text-align: center;
       }
     }
   }
