@@ -44,7 +44,7 @@
     margin: 0 auto;
     border: 1px solid transparent;
     padding: 20px;
-    @include box-shadow(1px 1px 10px rgba(black, .05));
+    @include box-shadow(1px 1px 10px rgba(black, .2));
     @include transition(all .5s ease-in-out);
 
     &::before {
