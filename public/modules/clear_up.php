@@ -8,7 +8,7 @@ add_action('init', 'clayball_head_cleanup');
 add_filter('language_attributes', 'clayball_language_attributes');
 add_filter('the_generator', '__return_false');
 add_filter('style_loader_tag', 'clayball_clean_style_tag');
-add_filter('script_loader_tag', 'clayball_clean_script_tag');
+//add_filter('script_loader_tag', 'clayball_clean_script_tag');
 add_filter('body_class', 'clayball_body_class');
 add_filter('embed_oembed_html', 'clayball_embed_wrap');
 add_filter('get_avatar', 'clayball_remove_self_closing_tags');
